@@ -173,7 +173,7 @@ func (s *Scraper) FetchTweetsByUserIDLegacy(userID string, maxTweetsNbr int, cur
 		maxTweetsNbr = 200
 	}
 
-	req, err := s.newRequest("GET", "https://api.twitter.com/2/timeline/profile/"+userID+".json")
+	req, err := s.newRequest("GET", "https://api.x.com/2/timeline/profile/"+userID+".json")
 	if err != nil {
 		return nil, "", err
 	}
@@ -199,7 +199,7 @@ func (s *Scraper) FetchTweetsByUserIDLegacy(userID string, maxTweetsNbr int, cur
 // GetTweet get a single tweet by ID.
 func (s *Scraper) GetTweet(id string) (*Tweet, error) {
 	if s.isOpenAccount {
-		req, err := s.newRequest("GET", "https://api.twitter.com/2/timeline/conversation/"+id+".json")
+		req, err := s.newRequest("GET", "https://api.x.com/2/timeline/conversation/"+id+".json")
 		if err != nil {
 			return nil, err
 		}
@@ -284,7 +284,7 @@ func (s *Scraper) GetTweet(id string) (*Tweet, error) {
 
 		// Surprisingly, if bearerToken2 is not set, then animated GIFs are not
 		// present in the response for tweets with a GIF + a photo like this one:
-		// https://twitter.com/Twitter/status/1580661436132757506
+		// https://x.com/Twitter/status/1580661436132757506
 		curBearerToken := s.bearerToken
 		if curBearerToken != bearerToken2 {
 			s.setBearerToken(bearerToken2)
@@ -353,7 +353,7 @@ func (s *Scraper) GetTweet(id string) (*Tweet, error) {
 
 		// Surprisingly, if bearerToken2 is not set, then animated GIFs are not
 		// present in the response for tweets with a GIF + a photo like this one:
-		// https://twitter.com/Twitter/status/1580661436132757506
+		// https://x.com/Twitter/status/1580661436132757506
 		curBearerToken := s.bearerToken
 		if curBearerToken != bearerToken2 {
 			s.setBearerToken(bearerToken2)
