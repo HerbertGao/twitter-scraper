@@ -1,8 +1,8 @@
 # Twitter Scraper
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/imperatrona/twitter-scraper.svg)](https://pkg.go.dev/github.com/imperatrona/twitter-scraper) [![Go](https://github.com/imperatrona/twitter-scraper/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/imperatrona/twitter-scraper/actions/workflows/go.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/HerbertGao/twitter-scraper.svg)](https://pkg.go.dev/github.com/HerbertGao/twitter-scraper) [![Go](https://github.com/HerbertGao/twitter-scraper/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/HerbertGao/twitter-scraper/actions/workflows/go.yml)
 
-Twitter’s API is pricey and has lots of limitations. But their frontend has its own API, which was reverse-engineered by [@n0madic](https://github.com/n0madic) and maintained by [@imperatrona](https://github.com/imperatrona). Some endpoints require authentication, but it is easy to scale by buying new accounts and proxies.
+Twitter’s API is pricey and has lots of limitations. But their frontend has its own API, which was reverse-engineered by [@n0madic](https://github.com/n0madic) and maintained by [@HerbertGao](https://github.com/HerbertGao). Some endpoints require authentication, but it is easy to scale by buying new accounts and proxies.
 
 You can use this library to get tweets, profiles, and trends trivially.
 
@@ -64,7 +64,7 @@ You can use this library to get tweets, profiles, and trends trivially.
 ## Installation
 
 ```shell
-go get -u github.com/imperatrona/twitter-scraper
+go get -u github.com/HerbertGao/twitter-scraper
 ```
 
 ## Quick start
@@ -75,7 +75,7 @@ package main
 import (
     "context"
     "fmt"
-    twitterscraper "github.com/imperatrona/twitter-scraper"
+    twitterscraper "github.com/HerbertGao/twitter-scraper"
 )
 
 func main() {
