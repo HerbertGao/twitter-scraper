@@ -126,7 +126,7 @@ func (s *Scraper) GetProfile(username string) (Profile, error) {
 
 func (s *Scraper) GetProfileByID(userID string) (Profile, error) {
 	var jsn user
-	req, err := http.NewRequest("GET", "https://twitter.com/i/api/graphql/Qw77dDjp9xCpUY-AXwt-yQ/UserByRestId", nil)
+	req, err := http.NewRequest("GET", "https://x.com/i/api/graphql/Qw77dDjp9xCpUY-AXwt-yQ/UserByRestId", nil)
 	if err != nil {
 		return Profile{}, err
 	}

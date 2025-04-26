@@ -46,7 +46,7 @@ func (s *Scraper) FetchTweetsAndRepliesByUserID(userID string, maxReplysNbr int,
 		maxReplysNbr = 200
 	}
 
-	req, err := s.newRequest("GET", "https://twitter.com/i/api/graphql/bt4TKuFz4T7Ckk-VvQVSow/UserTweetsAndReplies")
+	req, err := s.newRequest("GET", "https://x.com/i/api/graphql/bt4TKuFz4T7Ckk-VvQVSow/UserTweetsAndReplies")
 	if err != nil {
 		return nil, "", err
 	}
@@ -111,7 +111,7 @@ func (s *Scraper) FetchTweetsByUserID(userID string, maxTweetsNbr int, cursor st
 		maxTweetsNbr = 200
 	}
 
-	req, err := s.newRequest("GET", "https://twitter.com/i/api/graphql/UGi7tjRPr-d_U3bCPIko5Q/UserTweets")
+	req, err := s.newRequest("GET", "https://x.com/i/api/graphql/UGi7tjRPr-d_U3bCPIko5Q/UserTweets")
 	if err != nil {
 		return nil, "", err
 	}
@@ -217,7 +217,7 @@ func (s *Scraper) GetTweet(id string) (*Tweet, error) {
 			}
 		}
 	} else if s.isLogged {
-		req, err := s.newRequest("GET", "https://twitter.com/i/api/graphql/_8aYOgEDz35BrBcBal1-_w/TweetDetail")
+		req, err := s.newRequest("GET", "https://x.com/i/api/graphql/_8aYOgEDz35BrBcBal1-_w/TweetDetail")
 		if err != nil {
 			return nil, err
 		}
@@ -307,7 +307,7 @@ func (s *Scraper) GetTweet(id string) (*Tweet, error) {
 			}
 		}
 	} else {
-		req, err := s.newRequest("GET", "https://twitter.com/i/api/graphql/xBtHv5-Xsk268T5ng_OGNg/TweetResultByRestId")
+		req, err := s.newRequest("GET", "https://x.com/i/api/graphql/xBtHv5-Xsk268T5ng_OGNg/TweetResultByRestId")
 		if err != nil {
 			return nil, err
 		}
@@ -442,7 +442,7 @@ func (s *Scraper) fetchHomeTweets(_ string, maxTweetsNbr int, cursor string) ([]
 		maxTweetsNbr = 200
 	}
 
-	req, err := s.newRequest("GET", "https://twitter.com/i/api/graphql/9EwYy8pLBOSFlEoSP2STiQ/HomeLatestTimeline")
+	req, err := s.newRequest("GET", "https://x.com/i/api/graphql/9EwYy8pLBOSFlEoSP2STiQ/HomeLatestTimeline")
 	if err != nil {
 		return nil, "", err
 	}
@@ -517,7 +517,7 @@ func (s *Scraper) fetchForYouTweets(_ string, maxTweetsNbr int, cursor string) (
 		maxTweetsNbr = 200
 	}
 
-	req, err := s.newRequest("GET", "https://twitter.com/i/api/graphql/1u0Wlkw6Ru1NwBUD-pDiww/HomeTimeline")
+	req, err := s.newRequest("GET", "https://x.com/i/api/graphql/1u0Wlkw6Ru1NwBUD-pDiww/HomeTimeline")
 	if err != nil {
 		return nil, "", err
 	}
