@@ -1,9 +1,11 @@
 module github.com/imperatrona/twitter-scraper
 
-go 1.16
+go 1.23.0
+
+toolchain go1.24.0
 
 require (
 	github.com/AlexEidt/Vidio v1.5.1
 	github.com/google/go-cmp v0.6.0
-	golang.org/x/net v0.29.0
+	golang.org/x/net v0.36.0
 )
